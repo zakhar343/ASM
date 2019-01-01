@@ -54,7 +54,7 @@ zero:
 next:
   xor ax,ax
   xor bx,bx
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;puts decimal digits into buf array
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;puts decimal digits into buf array
   lea bx,bufdigits
   mov di,[bp+4]
   lea si,helpbuf
@@ -90,7 +90,7 @@ clear:
   mov count,0
   pop bp
   ret 2
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 printword:
   push bp
   mov bp,sp
