@@ -35,7 +35,7 @@
   mov ax,4c00h
   int 21h
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;reads decimal number into first stack word address
-readnumber:
+proc readnumber
   push bp
   mov bp,sp
   lea bx,bufdigits
@@ -90,8 +90,9 @@ clear:
   mov count,0
   pop bp
   ret 2
+endp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-printword:
+proc printword
   push bp
   mov bp,sp
   mov ax,[bp+4]
@@ -116,4 +117,5 @@ print:
   jnz print
   pop bp
   ret 2
+endp
 end
