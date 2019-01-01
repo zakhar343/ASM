@@ -44,15 +44,14 @@ readnumber:
 zero:
   mov ah,01h
   int 21h
-  inc count
   cmp al,0dh
   je next
+  inc count
   sub al,30h
   mov byte ptr[bx],al
   dec bx
   jmp zero
 next:
-  dec count
   xor ax,ax
   xor bx,bx
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;puts decimal digits into buf array
